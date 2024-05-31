@@ -15,7 +15,7 @@ type ReActAgent struct {
 	tools     map[string]Tool
 }
 
-func NewReActAgent(llmClient *OpenAIClient, tools []Tool) *ReActAgent {
+func NewReActAgent(llmClient *OllamaClient, tools []Tool) *ReActAgent {
 	toolMap := make(map[string]Tool)
 	for _, tool := range tools {
 		toolMap[tool.Name()] = tool
